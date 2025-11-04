@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Links | Intan Permata Wardhaningsih</title>
+
+  <!-- Font Elegan -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 0.5px;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fffaf5, #f2f7ff);
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+    }
+
+    main {
+      flex: 1; 
+      padding: 20px 10%;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 15px 30px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    .back-btn {
+      color: #222;
+      font-size: 1rem;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      margin-left: 20px;
+    }
+
+    .back-btn:hover {
+      background: rgba(0, 0, 0, 0.1);
+      transform: scale(1.05);
+    }
+
+    .menu {
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .menu:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      overflow: hidden;
+      min-width: 180px;
+    }
+
+    .dropdown a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dropdown a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #c5c5c5;
+    }
+
+    .show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 10px auto 0;
+    }
+
+    /* SOCIAL LINKS - VERTICAL SCROLL TANPA BAR */
+    .social-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 400px;  /* tinggi container */
+      overflow-y: auto;
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Chrome, Edge, Safari */
+    .social-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 12px; /* jarak ikon dan teks */
+      text-decoration: none;
+      background: #fffdfb;
+      color: #222;
+      border: 2px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 12px 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain; 
+    }
+
+    .social-link:hover {
+      background: #222;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.8rem;
+      color: #666;
+      background: #fafafa;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        padding: 20px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index1.html" class="back-btn">🏠︎</a>
+    <div class="menu" onclick="toggleDropdown()">☰</div>
+    <div class="dropdown" id="dropdownMenu">
+      <a href="portofolio.html">Portfolio</a>
+      <a href="produk.html">Product</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Connect with Me</h1>
+    <p>Buka peluang, kolaborasi, dan inspirasi bersama!</p>
+    <p>Terhubung dengan saya melalui media sosial untuk ide, proyek, dan update terkini.</p>
+  </header>
+
+  <!-- SOCIAL LINKS -->
+  <main>
+    <section class="social-container">
+      <a href="https://www.linkedin.com/in/intan-permata-wardhaningsih" class="social-link" target="_blank">
+        <img src="assets/linkedin.png" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="https://t.me/hayintana" class="social-link" target="_blank">
+        <img src="assets/tele.png" alt="Telegram"> Telegram
+      </a>
+      <a href="https://wa.me/6282143548224" class="social-link" target="_blank">
+        <img src="assets/wa.png" alt="WhatsApp"> WhatsApp
+      </a>
+      <a href="https://instagram.com/intaanwrdh" class="social-link" target="_blank">
+        <img src="assets/ig.png" alt="Instagram"> Instagram
+      </a>
+      <a href="https://www.tiktok.com/@hayintana" class="social-link" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok"> TikTok
+      </a>
+      <a href="https://youtube.com/@insiroom" class="social-link" target="_blank">
+        <img src="assets/yt.png" alt="YouTube"> YouTube
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 — Intan Permata Wardhaningsih
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu')) {
+        let dropdowns = document.getElementsByClassName("dropdown");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
